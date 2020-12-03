@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@trevoreyre/autocomplete-vue": "^2.2.0",
         "vue-router": "^3.4.9"
     }
 }

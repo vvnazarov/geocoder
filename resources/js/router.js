@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Index from "./components/Index";
 import ApiKeys from "./components/ApiKeys";
 import HowUse from "./components/HowUse";
+import Example from "./components/Example";
 
 const routes = [
     {
@@ -28,6 +29,11 @@ const routes = [
         path:'/howusegeocode',
         name:'howusegeocode',
         component: HowUse
+    },
+    {
+        path:'/example',
+        name:'example',
+        component: Example
     },
 
 ];

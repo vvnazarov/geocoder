@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "440ba70c-41c3-451d-9dfd-fad4bf93f612",
+		"name": "geohelper.info",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/cities?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=Астра&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Астра"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "city ua",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/cities?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=Киев&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Киев"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						},
+						{
+							"key": "filter[countryIso]",
+							"value": "ua",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "city ua Київ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/cities?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=Київ&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Київ"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						},
+						{
+							"key": "filter[countryIso]",
+							"value": "ua",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "street",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/streets?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=&filter[cityId]=2350&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"streets"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": ""
+						},
+						{
+							"key": "filter[cityId]",
+							"value": "2350"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "street москва",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/streets?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=&filter[cityId]=4995&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"streets"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": ""
+						},
+						{
+							"key": "filter[cityId]",
+							"value": "4995"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "street крещатик",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/streets?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[name]=Побе&filter[cityId]=427815&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"streets"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Побе"
+						},
+						{
+							"key": "filter[cityId]",
+							"value": "427815"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "street дерибасовская",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/streets?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[cityId]=27324&locale[lang]=ru&filter[name]=Набер",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"streets"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Дериб",
+							"disabled": true
+						},
+						{
+							"key": "filter[cityId]",
+							"value": "27324"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						},
+						{
+							"key": "filter[name]",
+							"value": "Набер"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://geohelper.info/api/v1/regions?apiKey=meHuIOl8cE33lIqHJVQ84iNEnbsRcijD&filter[id]=55&locale[lang]=ru",
+					"protocol": "http",
+					"host": [
+						"geohelper",
+						"info"
+					],
+					"path": [
+						"api",
+						"v1",
+						"regions"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "meHuIOl8cE33lIqHJVQ84iNEnbsRcijD"
+						},
+						{
+							"key": "filter[id]",
+							"value": "55"
+						},
+						{
+							"key": "locale[lang]",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "76ebbb67-fc3a-4ae8-804d-387b6146175a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7e6ccd83-015d-43e2-b12b-c057433b3704",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

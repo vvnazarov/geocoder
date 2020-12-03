@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "85c2bbc6-ac49-41fb-8ff4-388f36d914bd",
+		"name": "geocoder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "342559xz",
+									"type": "text"
+								},
+								{
+									"key": "device_name",
+									"value": "pc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "apikey",
+			"item": [
+				{
+					"name": "all api keys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/apikey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"apikey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add api keys",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/apikey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"apikey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete api keys",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/apikey/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"apikey",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show key",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/apikey/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"apikey",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "geocoder",
+			"item": [
+				{
+					"name": "geocoder search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/geocoder/search?apikey=9|gHATPllEfviFn8g1MQPEw14G2iRYObs9R50iCjLpjiqOabB88D5R8FEnrqziPnQWvYHG6S0B8wh5FcgS&city=Астрахань &street=Ленина пл&building=9&flat=kv 95",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocoder",
+								"search"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "9|gHATPllEfviFn8g1MQPEw14G2iRYObs9R50iCjLpjiqOabB88D5R8FEnrqziPnQWvYHG6S0B8wh5FcgS"
+								},
+								{
+									"key": "city",
+									"value": "Астрахань "
+								},
+								{
+									"key": "street",
+									"value": "Ленина пл"
+								},
+								{
+									"key": "building",
+									"value": "9"
+								},
+								{
+									"key": "flat",
+									"value": "kv 95"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "geocoder city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/geocoder/locality?apikey=10|uDhjaSgjN9Q06Aek03KOGQW9a0NPg2Qm9pEziwTZtvOqWOuXmRhSrc5uixbqeWP0zh7UIugzL0HtsO0o&city=Астрахань&lang=ru",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocoder",
+								"locality"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "10|uDhjaSgjN9Q06Aek03KOGQW9a0NPg2Qm9pEziwTZtvOqWOuXmRhSrc5uixbqeWP0zh7UIugzL0HtsO0o"
+								},
+								{
+									"key": "city",
+									"value": "Астрахань"
+								},
+								{
+									"key": "lang",
+									"value": "ru"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "geocoder search Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/geocoder/street?apikey=10|uDhjaSgjN9Q06Aek03KOGQW9a0NPg2Qm9pEziwTZtvOqWOuXmRhSrc5uixbqeWP0zh7UIugzL0HtsO0o&city=2350&street=луконина&lang=ru",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocoder",
+								"street"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "10|uDhjaSgjN9Q06Aek03KOGQW9a0NPg2Qm9pEziwTZtvOqWOuXmRhSrc5uixbqeWP0zh7UIugzL0HtsO0o"
+								},
+								{
+									"key": "city",
+									"value": "2350"
+								},
+								{
+									"key": "street",
+									"value": "луконина"
+								},
+								{
+									"key": "lang",
+									"value": "ru"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|YrWQaNioaKsMSsxcIS8WHDH84CdoTdHtUQu7shGJ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e30207e0-1a59-40e0-b2ad-ccf5777d8f72",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a4ee553b-b1d7-4619-9831-414354043521",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7e49daa1-fd37-4571-994e-c52fc2fbe6fb",
+			"key": "url",
+			"value": "http://geocoder.loc"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -36,4 +36,4 @@ const app = new Vue({
     el: '#app',
     router
 });
-localStorage.setItem('base_url','http://127.0.0.1:8000');
+localStorage.setItem('base_url','http://geocoder.loc/');

@@ -31,7 +31,7 @@
                 menu:[
                     {title:'ApiKey',route:'apikey',isActiv:false},
                     {title:'How to use the geocode api',route:'howusegeocode',isActiv:true},
-
+                    {title:'Example',route:'example',isActiv:false},
                 ]
             }
         },
