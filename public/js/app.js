@@ -55940,7 +55940,7 @@ var app = new Vue({
   el: '#app',
   router: _router__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
-localStorage.setItem('base_url', 'http://geocoder.loc/');
+localStorage.setItem('base_url', 'http://127.0.0.1:8000');
 
 /***/ }),
 

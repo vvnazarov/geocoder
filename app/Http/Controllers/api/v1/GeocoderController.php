@@ -11,6 +11,7 @@ use Yandex\Geocode\Facades\YandexGeocodeFacade;
 class GeocoderController extends Controller
 {
     public function search(Request $request){
+
         $validate = Validator::make($request->all(),[
             'apikey'=>'required',
             'address'=>'string',
@@ -18,16 +19,13 @@ class GeocoderController extends Controller
             'street'=>'string',
             'building'=>'string',
             'flat'=>'string',
-//            'postcode'=>'string',
         ]);
         if($validate->fails()){
             return ['error'=>'401','message'=>$validate->getMessageBag()];
         }
-
         if(!\App\Models\ApiKey::checkApiKey($request->input('apikey'))){
             return ['error'=>'408','message'=>'The Api Key doesn\'t exist or you don\'t have access to it'];
         }
-
         if($request->input('address')) {
             $address_field = $request->input('address');
 
@@ -150,7 +148,10 @@ class GeocoderController extends Controller
         $rez = $response->result;
         foreach ($rez as $item){
             $returnA[count($returnA)]['id'] = $item->id;
-            $returnA[count($returnA)-1]['name'] = $item->name;
+            $returnA[count($returnA)-1]['name'] = '';
+            if(isset($item->localityType->name))
+                $returnA[count($returnA)-1]['name'] .= $item->localityType->name.' ';
+            $returnA[count($returnA)-1]['name'] .= $item->name;
             $returnA[count($returnA)-1]['cityId'] = $item->cityId;
 //            $returnA[count($returnA)-1]['postCode'] = $item->postCode;
         }
