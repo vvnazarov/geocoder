@@ -27,6 +27,9 @@ Route::prefix('v1/')->group(function () {
 
     Route::prefix('geocoder/')->group(function (){
 
+        Route::get('locality','GeocoderController@locality')->name('api.v1.geocoder.locality');
+
+        Route::get('street','GeocoderController@street')->name('api.v1.geocoder.street');
 
         Route::get('search','GeocoderController@search')->name('api.v1.geocoder.search');
     });

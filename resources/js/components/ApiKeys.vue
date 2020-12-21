@@ -86,6 +86,7 @@
                 menu:[
                     {title:'ApiKey',route:'apikey',isActiv:true},
                     {title:'How to use the geocode api',route:'howusegeocode',isActiv:false},
+                    {title:'Example',route:'example',isActiv:false},
 
                 ],
                 key:[]

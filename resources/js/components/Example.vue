@@ -4,12 +4,13 @@
             v-bind:isLogin="isLogin"
             v-bind:menu="menu"
         />
-        index
+        <ExempleForm />
     </div>
 </template>
 
 <script>
     import Menu from "./Menu";
+    import ExempleForm from "./ExampleForm";
     export default {
         mounted(){
             this.isLogin = (localStorage.getItem('bear_key') !=0)
@@ -18,15 +19,16 @@
             return {
                 isLogin:false,
                 menu:[
-                    {title:'ApiKey',route:'apikey',isActiv:true},
+                    {title:'ApiKey',route:'apikey',isActiv:false},
                     {title:'How to use the geocode api',route:'howusegeocode',isActiv:false},
-                    {title:'Example',route:'example',isActiv:false},
+                    {title:'Example',route:'example',isActiv:true},
 
                 ]
             }
         },
         components:{
-            Menu
+            Menu,
+            ExempleForm
         }
     }
 </script>
