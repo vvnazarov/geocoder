@@ -2,9 +2,12 @@
 
 namespace App\Console\Commands;
 
+use App\Models\ApiKey;
 use App\Models\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class CreateUser extends Command
@@ -50,6 +53,16 @@ class CreateUser extends Command
             $user->save();
 
             $this->info('New user is created');
+
+            $key =  new ApiKey();
+
+            $key->key = Str::random(80);
+            $key->user_id = $user->id;
+
+            $key->save();
+
+            $this->info('apikey - '.($key->apikey));
+
             return 0;
 
         }else{
