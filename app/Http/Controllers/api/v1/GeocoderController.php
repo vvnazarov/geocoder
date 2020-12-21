@@ -77,7 +77,7 @@ class GeocoderController extends Controller
             return ['error'=>'408','message'=>'The Api Key doesn\'t exist or you don\'t have access to it'];
         }
 
-        $url = 'http://geohelper.info/api/v1/cities?apiKey='.env('API_KEY_GEOCODE').'&filter[name]='.$request->input('city').'&locale[lang]='.$request->input('lang');
+        $url = 'http://geohelper.info/api/v1/cities?apiKey='.env('GEOHELPER_API_KEY').'&filter[name]='.$request->input('city').'&locale[lang]='.$request->input('lang');
 
         $response = \Illuminate\Support\Facades\Http::withOptions([
 //                        'debug' => true,
@@ -101,7 +101,7 @@ class GeocoderController extends Controller
 
 
 //            else{
-                $url = 'http://geohelper.info/api/v1/regions?apiKey='.env('API_KEY_GEOCODE').'&filter[id]='.$item->regionId.
+                $url = 'http://geohelper.info/api/v1/regions?apiKey='.env('GEOHELPER_API_KEY').'&filter[id]='.$item->regionId.
                     '&locale[lang]='.$request->input('lang');
 
                 $response = \Illuminate\Support\Facades\Http::withOptions([
@@ -136,7 +136,7 @@ class GeocoderController extends Controller
             return ['error'=>'408','message'=>'The Api Key doesn\'t exist or you don\'t have access to it'];
         }
 
-        $url = 'http://geohelper.info/api/v1/streets?apiKey='.env('API_KEY_GEOCODE').'&filter[name]='.$request->input('street').
+        $url = 'http://geohelper.info/api/v1/streets?apiKey='.env('GEOHELPER_API_KEY').'&filter[name]='.$request->input('street').
             '&locale[lang]='.$request->input('lang').'&filter[cityId]='.$request->input('city');
 
         $response = \Illuminate\Support\Facades\Http::withOptions([
