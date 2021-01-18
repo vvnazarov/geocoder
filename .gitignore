@@ -1,3 +1,9 @@
+/.idea
+/nbproject
+/public/Nginx_*_vhost.conf
+
+/storage/database
+
 /node_modules
 /public/hot
 /public/storage
