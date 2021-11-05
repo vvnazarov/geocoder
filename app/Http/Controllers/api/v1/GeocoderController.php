@@ -114,7 +114,8 @@ class GeocoderController extends Controller
                 $returnA[count($returnA)-1]['name'] .= ', '.$response->name;
             }
 
-        return ["success"=> true, "language"=> $request->input('lang'),'result'=>$returnA];
+        $response = ["success"=> true, "language"=> $request->input('lang'),'result'=>$returnA];
+        return response()->json($response)->setEncodingOptions(JSON_UNESCAPED_UNICODE);;
 
     }
 
@@ -156,8 +157,8 @@ class GeocoderController extends Controller
 //            $returnA[count($returnA)-1]['postCode'] = $item->postCode;
         }
 
-        return ["success"=> true, "language"=> $request->input('lang'),'result'=>$returnA];
-
+        $response = ["success"=> true, "language"=> $request->input('lang'),'result'=>$returnA];
+        return response()->json($response)->setEncodingOptions(JSON_UNESCAPED_UNICODE);;
     }
 
 }
