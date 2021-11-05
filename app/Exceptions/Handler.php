@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -50,6 +51,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($this->isHttpException($exception)) {
+            $code = $exception->getStatusCode();
+            $msg = $exception->getMessage() ?: (Response::$statusTexts[$code] ?? 'unknown status');
+        } else {
+            $code = 500;
+            $msg = $exception->getMessage() ?: 'unknown error';
+        }
+        return response()->json(['status' => $code, 'error' => $msg], $code);
+
         return parent::render($request, $exception);
     }
 }

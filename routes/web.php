@@ -14,7 +14,7 @@ use Yandex\Geocode\Facades\YandexGeocodeFacade;
 */
 
 
-
+return;
 
 Route::get('/{any}',function (){
     return view('index');
